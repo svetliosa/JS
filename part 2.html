@@ -1,0 +1,137 @@
+<html>
+<head>
+	<title>Svetliosa</title>
+  <meta charset="utf-8">
+	<style>
+.container {
+ margin: auto;
+ width: 70%;
+ }
+</style>
+</head>
+<body>
+
+<div class="container"> 
+<h4>Чрез функция на JavaScript прочетете съдържанието на едноредово
+текстово поле, в което е въведено име. Изведете съобщение за грешка, ако
+то е празно или с дължина , по-малка от 3 символа</h4>
+<form name="f">
+	<input type="text" name="t"></form>
+<script>
+function one(){
+var s=document.f.t.value;
+if (s=="") {alert("Полето е празно");}
+else if (s.length<3) {alert("Името е твърде кратко");}
+}	
+</script>	
+<form>
+<input type="submit" onclick="one()">
+</form>
+<hr>
+
+
+
+<h4>Чрез функция на JavaScript прочетете съдържанието на едноредово
+текстово поле. Пребройте срещанията в него на символ, въведен от
+клавиатурата. Изведете резултата по подходящ начин.</h4>
+<form name="f1">
+	<input type="text" name="t1"></form>
+	<script>
+		function two(){
+var a=prompt("Моля въведете символ: ");
+var s=document.f1.t1.value;
+
+var br=0;
+for(var i=0;i<s.length;i++){
+if	(s.charAt(i)==a){
+	br++;}}
+if (br==0){alert("Символа не се среща");}
+else {alert("Символа се среща "+br+" пъти");}
+}
+</script>
+<form>
+<input type="submit" onclick="two()">
+</form>
+<hr>
+
+
+
+<h4>Чрез функция на JavaScript прочетете съдържанието на две текстови
+полета от тип password. Изведете съобщение за грешка, ако те се
+различават едно от друго</h4>
+<form name="f2">
+	<input type="password" name="pass1"><br><br>
+    <input type="password" name="pass2"></form>
+<script>
+function three(){
+var pas1=document.f2.pass1.value;
+var pas2=document.f2.pass2.value;
+if(pas1 != pas2){alert("Паролите са различни");} 	
+}	
+</script>    
+<form>
+	<input type="submit" onclick="three()">
+</form>
+<hr>
+
+
+
+<h4>Чрез функция на JavaScript прочетете съдържанието на едноредово
+текстово поле, в което е въведено име. Изведете всеки символ от
+въведеното име на нов ред.</h4>
+<form name="f3">
+	<input type="text" name="t3">
+<script>
+function four(){	
+var z=document.f3.t3.value;
+for (var i=0;i<z.length;i++){
+document.write("<br>"+z.charAt(i))	
+}}	
+</script>	
+<br><br>
+<form>
+<input type="submit" onclick="four()">
+</form>	
+<hr>
+
+
+
+<h4>Чрез функция на JavaScript прочетете съдържанието на едноредово
+текстово поле, в което е въведено име. Изведете всеки символ от
+въведеното име като елемент от номериран списък.</h4>
+<form name="f4">
+<input type="text" name="t4"></form>
+<script>
+function five(){
+var z=document.f4.t4.value;
+document.write("<ol>");
+for (var i=0;i<z.length;i++){
+document.write("<br><li>"+z.charAt(i)+"</li>");}
+document.write("</ol>");}	
+</script>	
+<form>
+<input type="submit" onclick="five()">
+</form>
+<hr>
+
+
+
+<h4> Чрез функция на JavaScript прочетете съдържанието на едноредово
+текстово поле, в което е въведено име. Изведете всеки символ от
+въведеното име в отделна клетка от таблица с един ред.</h4>
+<form name="f5">
+	<input type="text" name="t5"></form>
+<script>
+function six(){
+var z=document.f5.t5.value;
+document.write("<table border='1'><tr>");
+for(var i=0;i<z.length;i++){
+document.write("<td>"+z.charAt(i)+"</td>");}	
+document.write("</table></tr>");}	
+</script>	
+<form>
+<input type="submit" onclick="six()">	
+</form>
+</div>
+</body>
+</html>
